@@ -1,0 +1,14 @@
+set(BUILD_DEPENDENCIES ON CACHE BOOL "build deps?")
+set(CMAKE_BUILD_TYPE "Debug" CACHE STRING "build type")
+set(CMAKE_C_FLAGS_DEBUG "-g -O0 -I/Library/Frameworks/GStreamer.framework/Versions/1.0/include/gstreamer-1.0/ -I/Library/Frameworks/GStreamer.framework/Versions/1.0/include/glib-2.0/ -I/Library/Frameworks/GStreamer.framework/Versions/1.0/lib/glib-2.0/include/" CACHE STRING "clang flags")
+set(OPENSSL_SSL_LIBRARY "/usr/local/opt/openssl/lib/libssl.dylib" CACHE STRING "openssl lib")
+set(OPENSSL_INCLUDE_DIR "/usr/local/opt/openssl/lib" CACHE STRING "lib openssl path")
+set(OPENSSL_CRYPTO_LIBRARY "/usr/local/opt/openssl/lib/libcrypto.dylib" CACHE STRING "lib openssl crypto")
+set(GLIB2_LIBDIR "/Library/Frameworks/GStreamer.framework/Versions/1.0/lib/libglib-2.0.dylib" CACHE STRING "glib libdir")
+set(GLIB2_LIBRARY_DIRS "" CACHE STRING "glib library dirs")
+# target_include_directories(kvsWebrtcClientMasterGstSample PRIVATE "/Library/Frameworks/GStreamer.framework/Versions/1.0/include/gstreamer-1.0/")
+#set("pkgcfg_lib_GST_gstreamer-1.0" "/Library/Frameworks/GStreamer.framework/Versions/1.0/lib/libgstreamer-1.0.dylib" CACHE STRING "gstreamer dylib")
+#set("GST_gstreamer-1.0_LIBDIR" "/Library/Frameworks/GStreamer.framework/Versions/1.0/lib" CACHE STRING "lib gstreamer libdir")
+# Installed mac installers (main and dev) from gstreamer site.
+# Copied .pc files from /Library/Frameworks/GStreamer.framework/Versions/1.0/lib/gstreamer-1.0/ 
+# to pkgconfig default search directories
